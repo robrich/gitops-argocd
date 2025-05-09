@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: frontend
+data:
+  BACKEND: http://backend:5000
+  PORT: '3000'
+  NODE_ENV: production
+

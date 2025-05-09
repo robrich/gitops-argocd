@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend
+data:
+  ASPNETCORE_URLS: http://+:5000
+  ASPNETCORE_ENVIRONMENT: Production

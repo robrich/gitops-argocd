@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+        version: 9492e68-main
+    spec:
+      containers:
+      - name: backend
+        image: robrich/backend:9492e68-main
+        ports:
+        - containerPort: 5000
+        envFrom:
+        - configMapRef:
+            name: backend
+        resources: {}
