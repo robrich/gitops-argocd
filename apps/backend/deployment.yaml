@@ -11,11 +11,11 @@ spec:
     metadata:
       labels:
         app: backend
-        version: 15f0431-main
+        version: 00918fc-main
     spec:
       containers:
       - name: backend
-        image: robrich/backend:15f0431-main
+        image: robrich/backend:00918fc-main
         ports:
         - containerPort: 5000
         envFrom:
