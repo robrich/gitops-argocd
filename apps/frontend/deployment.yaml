@@ -4,6 +4,7 @@ metadata:
   name: frontend-deployment
 spec:
   replicas: 2
+  revisionHistoryLimit: 2
   selector:
     matchLabels:
       app: frontend
@@ -11,11 +12,11 @@ spec:
     metadata:
       labels:
         app: frontend
-        version: v0.1
+        version: 894534a-main
     spec:
       containers:
       - name: frontend
-        image: robrich/frontend:9492e68-main
+        image: robrich/frontend:894534a-main
         ports:
         - containerPort: 3000
         envFrom:

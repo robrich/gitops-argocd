@@ -4,6 +4,7 @@ metadata:
   name: backend-deployment
 spec:
   replicas: 1
+  revisionHistoryLimit: 2
   selector:
     matchLabels:
       app: backend
@@ -11,11 +12,11 @@ spec:
     metadata:
       labels:
         app: backend
-        version: 9492e68-main
+        version: 894534a-main
     spec:
       containers:
       - name: backend
-        image: robrich/backend:9492e68-main
+        image: robrich/backend:894534a-main
         ports:
         - containerPort: 5000
         envFrom:
